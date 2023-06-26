@@ -5,12 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@astrojs/markdoc':
+    specifier: 0.0.0-markdoc-config-changes-20230626153541
+    version: 0.0.0-markdoc-config-changes-20230626153541(astro@2.7.0)
   '@astrojs/starlight':
     specifier: ^0.3.0
-    version: 0.3.0(astro@2.5.0)
+    version: 0.3.0(astro@2.7.0)
   astro:
-    specifier: ^2.5.0
-    version: 2.5.0(sharp@0.32.1)
+    specifier: ^2.7.0
+    version: 2.7.0(sharp@0.32.1)
   sharp:
     specifier: ^0.32.1
     version: 0.32.1
@@ -27,6 +30,14 @@ packages:
 
   /@astrojs/compiler@1.5.2:
     resolution: {integrity: sha512-EZ3d5UTqN71N2zE3VdzVJeM+dM+pu0wV/jOi6g2VDU21LQTWozafsFMpbcLE/ksmTmbQM90/Tnn19/IR9fWGUw==}
+    dev: false
+
+  /@astrojs/internal-helpers@0.0.0-markdoc-config-changes-20230626153541:
+    resolution: {integrity: sha512-psoYlIRZzedV+lk8/fNKtnl5/1ns27CKxeKETtLtDSuVbfNq0V9XXwgqdZun+6esg2kv+/2KMQANTYwfL0lvkQ==}
+    dev: false
+
+  /@astrojs/internal-helpers@0.1.0:
+    resolution: {integrity: sha512-OSwvoFkTqVowiyP+codQeQZWoq/HOwY32x17NxDglWoCx2sdyXzplDZoVV4/3odmSEY6/A+48WMl5qkjmP1CXw==}
     dev: false
 
   /@astrojs/language-server@1.0.8:
@@ -48,13 +59,34 @@ packages:
       vscode-uri: 3.0.7
     dev: false
 
-  /@astrojs/markdown-remark@2.2.1(astro@2.5.0):
+  /@astrojs/markdoc@0.0.0-markdoc-config-changes-20230626153541(astro@2.7.0):
+    resolution: {integrity: sha512-BjP1a4hcaYbx2hWcaQ//r96gcxdrRNM/csY5qsR53BcShbrnXszZ6rkOem+19ZOQuzSkeZUkfCWIFKQsnvpVEw==}
+    engines: {node: '>=16.12.0'}
+    peerDependencies:
+      astro: 0.0.0-markdoc-config-changes-20230626153541
+    dependencies:
+      '@astrojs/internal-helpers': 0.0.0-markdoc-config-changes-20230626153541
+      '@astrojs/prism': 2.1.2
+      '@markdoc/markdoc': 0.3.0
+      astro: 2.7.0(sharp@0.32.1)
+      esbuild: 0.17.19
+      github-slugger: 2.0.0
+      gray-matter: 4.0.3
+      kleur: 4.1.5
+      shiki: 0.14.3
+      zod: 3.21.4
+    transitivePeerDependencies:
+      - '@types/react'
+      - react
+    dev: false
+
+  /@astrojs/markdown-remark@2.2.1(astro@2.7.0):
     resolution: {integrity: sha512-VF0HRv4GpC1XEMLnsKf6jth7JSmlt9qpqP0josQgA2eSpCIAC/Et+y94mgdBIZVBYH/yFnMoIxgKVe93xfO2GA==}
     peerDependencies:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.5.0(sharp@0.32.1)
+      astro: 2.7.0(sharp@0.32.1)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -71,11 +103,11 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/mdx@0.19.7(astro@2.5.0):
+  /@astrojs/mdx@0.19.7(astro@2.7.0):
     resolution: {integrity: sha512-mfEbBD7oi8yBHhcJucEjnrquREkJ3os+jioURP8BR2B8tOV2rV2j8trvmLUgfS+P/+HevGObxCTjcRYxn6T7eg==}
     engines: {node: '>=16.12.0'}
     dependencies:
-      '@astrojs/markdown-remark': 2.2.1(astro@2.5.0)
+      '@astrojs/markdown-remark': 2.2.1(astro@2.7.0)
       '@astrojs/prism': 2.1.2
       '@mdx-js/mdx': 2.3.0
       acorn: 8.9.0
@@ -112,16 +144,16 @@ packages:
       zod: 3.21.4
     dev: false
 
-  /@astrojs/starlight@0.3.0(astro@2.5.0):
+  /@astrojs/starlight@0.3.0(astro@2.7.0):
     resolution: {integrity: sha512-Lj6/b2l4etJ6u5b80DSIhHtyFB0sxAqGp34zEYDMEGKNp93cxXflCSR5TOJG5B/vDeJ7F4H6xrE6/hyrMztiYg==}
     peerDependencies:
       astro: ^2.5.0
     dependencies:
-      '@astrojs/mdx': 0.19.7(astro@2.5.0)
+      '@astrojs/mdx': 0.19.7(astro@2.7.0)
       '@astrojs/sitemap': 1.3.3
       '@pagefind/default-ui': 1.0.0-alpha.5
       '@types/mdast': 3.0.11
-      astro: 2.5.0(sharp@0.32.1)
+      astro: 2.7.0(sharp@0.32.1)
       bcp-47: 2.1.0
       execa: 7.1.1
       hastscript: 7.2.0
@@ -641,6 +673,21 @@ packages:
     resolution: {integrity: sha512-4/RWEeXDO6bocPONheFe6gX/oQdP/bEpv0oL4HqjPP5DCenBSt0mHgahppY49N0CpsaqffdwPq+TlX9CYOq2Dw==}
     dev: false
 
+  /@markdoc/markdoc@0.3.0:
+    resolution: {integrity: sha512-QWCF8krIIw52ulflfnoff0yG1eKl9CCGA3KAiOjHyYtHNzSEouFh8lO52nAaO3qV2Ctj1GTB8TTb2rTfvISQfA==}
+    engines: {node: '>=14.7.0'}
+    peerDependencies:
+      '@types/react': '*'
+      react: '*'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      react:
+        optional: true
+    optionalDependencies:
+      '@types/markdown-it': 12.2.3
+    dev: false
+
   /@mdx-js/mdx@2.3.0:
     resolution: {integrity: sha512-jLuwRlz8DQfQNiUCJR50Y09CGPq3fLtmtUQfVrj79E0JWu3dvsVcxVIcfhR5h0iXu+/z++zDrYeiJqifRynJkA==}
     dependencies:
@@ -803,11 +850,30 @@ packages:
     resolution: {integrity: sha512-sqm9g7mHlPY/43fcSNrCYfOeX9zkTTK+euO5E6+CVijSMm5tTjkVdwdqRkY3ljjIAf8679vps5jKUoJBCLsMDA==}
     dev: false
 
+  /@types/linkify-it@3.0.2:
+    resolution: {integrity: sha512-HZQYqbiFVWufzCwexrvh694SOim8z2d+xJl5UNamcvQFejLY/2YUtzXHYi3cHdI7PMlS8ejH2slRAOJQ32aNbA==}
+    dev: false
+    optional: true
+
+  /@types/markdown-it@12.2.3:
+    resolution: {integrity: sha512-GKMHFfv3458yYy+v/N8gjufHO6MSZKCOXpZc5GXIWWy8uldwfmPn98vp81gZ5f9SVw8YYBctgfJ22a2d7AOMeQ==}
+    requiresBuild: true
+    dependencies:
+      '@types/linkify-it': 3.0.2
+      '@types/mdurl': 1.0.2
+    dev: false
+    optional: true
+
   /@types/mdast@3.0.11:
     resolution: {integrity: sha512-Y/uImid8aAwrEA24/1tcRZwpxX3pIFTSilcNDKSPn+Y2iDywSEachzRuvgAYYLR3wpGXAsMbv5lvKLDZLeYPAw==}
     dependencies:
       '@types/unist': 2.0.6
     dev: false
+
+  /@types/mdurl@1.0.2:
+    resolution: {integrity: sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==}
+    dev: false
+    optional: true
 
   /@types/mdx@2.0.5:
     resolution: {integrity: sha512-76CqzuD6Q7LC+AtbPqrvD9AqsN0k8bsYo2bM2J8pmNldP1aIPAbzUQ7QbobyXL4eLr1wK5x8FZFe8eF/ubRuBg==}
@@ -947,8 +1013,8 @@ packages:
     hasBin: true
     dev: false
 
-  /astro@2.5.0(sharp@0.32.1):
-    resolution: {integrity: sha512-dZZuK2vEpfinbVALthUW31NOVUFPobgyi0+2PR3FH3diy6X9HBw1PLbS5wRsWOKaEXRbzxBkXc39Rbm0yRzKaA==}
+  /astro@2.7.0(sharp@0.32.1):
+    resolution: {integrity: sha512-gUYx2R0V7fpZtFRN9f4nE0We95qYhJyAr+VW0nVFqlMMF1of9MzrjjJ+8rIGJ/6RooFK8XAaXWTQMGTok3ZzEA==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     peerDependencies:
@@ -958,8 +1024,9 @@ packages:
         optional: true
     dependencies:
       '@astrojs/compiler': 1.5.2
+      '@astrojs/internal-helpers': 0.1.0
       '@astrojs/language-server': 1.0.8
-      '@astrojs/markdown-remark': 2.2.1(astro@2.5.0)
+      '@astrojs/markdown-remark': 2.2.1(astro@2.7.0)
       '@astrojs/telemetry': 2.1.1
       '@astrojs/webapi': 2.2.0
       '@babel/core': 7.22.5
@@ -993,6 +1060,7 @@ packages:
       magic-string: 0.27.0
       mime: 3.0.0
       ora: 6.3.1
+      p-limit: 4.0.0
       path-to-regexp: 6.2.1
       preferred-pm: 3.0.3
       prompts: 2.4.2
@@ -2837,6 +2905,13 @@ packages:
       yocto-queue: 0.1.0
     dev: false
 
+  /p-limit@4.0.0:
+    resolution: {integrity: sha512-5b0R4txpzjPWVw/cXXUResoD4hb6U/x9BH08L7nw+GN1sezDzPdxeRvpc9c433fZhBan/wusjbCsqwqm4EIBIQ==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      yocto-queue: 1.0.0
+    dev: false
+
   /p-locate@4.1.0:
     resolution: {integrity: sha512-R79ZZ/0wAxKGu3oYMlz8jy/kbhsNrS7SKZ7PxEHBgJ5+F2mtFW2fK2cOtBh1cHYkQsbzFV7I+EoRKe6Yt0oK7A==}
     engines: {node: '>=8'}
@@ -3926,6 +4001,11 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: false
+
+  /yocto-queue@1.0.0:
+    resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
+    engines: {node: '>=12.20'}
     dev: false
 
   /zod@3.21.4:

@@ -10,8 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/markdoc": "0.0.0-markdoc-config-changes-20230626153541",
     "@astrojs/starlight": "^0.3.0",
-    "astro": "^2.5.0",
+    "astro": "^2.7.0",
     "sharp": "^0.32.1"
   }
 }
